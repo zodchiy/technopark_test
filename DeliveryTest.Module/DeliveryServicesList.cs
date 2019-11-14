@@ -6,7 +6,7 @@ namespace DeliveryTest.DeliveryServices
 {
     /// <summary>
     /// Доступный список поставщиков
-    /// тут можут происходить их ниницализация, проверка на доступнойсть, и прочее...
+    /// тут могут происходить инициализация, проверка на доступнойсть и прочее...
     /// </summary>
     public static class DeliveryServicesList 
     {

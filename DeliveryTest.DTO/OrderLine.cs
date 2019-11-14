@@ -5,7 +5,7 @@ using System.Text;
 namespace DeliveryTest.DTO
 {
     /// <summary>
-    /// Стркоа заказа
+    /// Строка заказа
     /// </summary>
     public class OrderLine
     {

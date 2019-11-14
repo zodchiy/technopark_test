@@ -5,7 +5,7 @@ using System.Text;
 namespace DeliveryTest.DeliveryServices
 {
     /// <summary>
-    /// Ответ клиенту от серсиа доставки
+    /// Ответ клиенту от сервиса доставки
     /// </summary>
     public class DeliveryServiceResponse
     {
@@ -13,7 +13,7 @@ namespace DeliveryTest.DeliveryServices
         public int serviceId { get; set; }
         //Наименование сервиса доставки
         public string serviceName { get; set; }
-        //Произошкла ошибка
+        //Произошла ошибка
         public bool somethingIsWrong { get; set; }
         //Описание ошибки
         public string errorMessage { get; set; }

@@ -27,7 +27,7 @@ namespace DeliveryTest.TestConsole
             Console.WriteLine($"Адрес отправителя:{order.AddressDeparture}") ;
             Console.WriteLine($"Адрес получателя:{order.AddressDestination}");
             Console.WriteLine("Список товаров:");
-            order.OrderLines.ForEach(x => { Console.WriteLine($"{x.Good.Id} - {x.Good.Name}, вес {x.Good.Weight}кг, Ш*В*Д {x.Good.Dimensions.Width}*{x.Good.Dimensions.Depth}*{x.Good.Dimensions.Height}, кол-во - {x.Qty}"); }); 
+            order.OrderLines.ForEach(x => { Console.WriteLine($"{x.Good.Id} - {x.Good.Name}, вес {x.Good.Weight}кг, Ш*Г*Д {x.Good.Dimensions.Width}*{x.Good.Dimensions.Depth}*{x.Good.Dimensions.Height}, кол-во - {x.Qty}"); }); 
             Console.WriteLine("Выберите перевозчика для расчета стоимости доставки (Esc для выхода):");
             Console.WriteLine("0 - Все");
             var services = DeliveryServicesList.GetAll();
@@ -66,6 +66,10 @@ namespace DeliveryTest.TestConsole
                             }
                         }
                     }
+                    else
+                    {
+                        Console.WriteLine("Промахнулись с выбором, попробуйте еще раз.");
+                    }
                 }
                 catch (Exception)
                 {
@@ -81,12 +85,12 @@ namespace DeliveryTest.TestConsole
         public static int rndGen()
         {
             Random rnd = new Random();
-            return rnd.Next(10, 1151) * 10;
+            return rnd.Next(10, 151) * 10;
         }
         public static decimal rndWeightGen()
         {
             Random rnd = new Random();
-            return Math.Round(new decimal(rnd.Next(10, 151000)/1000.0), 2);
+            return Math.Round(new decimal(rnd.Next(10, 51000)/1000.0), 2);
         }
     }
 }

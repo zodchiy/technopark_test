@@ -19,7 +19,7 @@ namespace DeliveryTest.DeliveryServices
         public int Id { get; protected set; }
         //Наименование поставщика
         public string Name { get; protected set; }
-        //Расчет стоимости поставки
+        //Расчет стоимости доставки
         public abstract DeliveryServiceResponse Send(Order order);
     }
 }
